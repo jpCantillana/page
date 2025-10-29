@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Online Curriculum Vitae of Cantillana, an industrial engineer specializing in transportation, logistics, operations research, OR, optimization, mathematical modeling, exact methods. Download the PDF version here.">
+    <title>Juan Pablo Cantillana - Curriculum Vitae</title>
+    <style>
+        /* Color Variables */
+        :root {
+            --text-primary: #2d3748;
+            --text-secondary: #4a5568;
+            --background: #fafafa;
+            --section-bg: #ffffff;
+            --header-bg: #edf2f7;
+            --accent: #718096;
+            --border: #e2e8f0;
+        }
+
+        /* Base Styles */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0 auto;
+            max-width: 50rem; /* 800px in rem */
+            padding: 0 1.25rem; /* 20px in rem */
+            background-color: var(--background);
+            color: var(--text-primary);
+        }
+
+        /* Header Styles */
+        header {
+            background-color: var(--header-bg);
+            padding: 2rem;
+            margin: 2rem 0;
+            border-radius: 0.5rem;
+            text-align: center;
+        }
+
+        .profile-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .profile-picture {
+            width: 8rem;
+            height: 8rem;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 0.125rem solid var(--border);
+            filter: grayscale(100%);
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 1.8rem;
+            color: var(--text-primary);
+        }
+
+        .tagline {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            margin: 0.5rem 0;
+        }
+
+        .contact-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-top: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .contact-links a {
+            color: var(--accent);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        /* Section Styles - UPDATED FOR CENTER ALIGNMENT */
+        section {
+            background-color: var(--section-bg);
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 0.5rem;
+            border: 0.0625rem solid var(--border);
+            text-align: center; /* Center all text content */
+        }
+
+        /* Reset heading and paragraph alignment within sections */
+        section h2 {
+            color: var(--text-primary);
+            margin-top: 0;
+            font-size: 1.4rem;
+            text-align: center;
+        }
+
+        section p {
+            color: var(--text-secondary);
+            max-width: 80ch;
+            text-align: justify;
+            text-justify: inter-word;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Button Styles */
+        .download-btn {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            background-color: var(--accent);
+            color: white;
+            border-radius: 0.375rem;
+            margin-top: 1rem;
+            margin-right: 1rem;
+            text-decoration: none;
+        }
+
+        .btn-group {
+            display: flex;
+            justify-content: center; /* Center the button group */
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            margin: 2rem 0;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 48rem) { /* 768px */
+            body {
+                padding: 0 1rem;
+            }
+            
+            header {
+                padding: 1.5rem;
+                margin: 1rem 0;
+            }
+            
+            section {
+                padding: 1.25rem;
+                margin: 1rem 0;
+            }
+            
+            .contact-links {
+                gap: 1rem;
+            }
+            
+            .btn-group {
+                flex-direction: column;
+                align-items: center; /* Center buttons on mobile too */
+            }
+            
+            .download-btn {
+                margin-right: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="profile-container">
+            <!-- Add your profile picture here -->
+            <img src="profile.jpg" alt="Juan Pablo Cantillana" class="profile-picture">
+            <div>
+                <h1>Juan Pablo Cantillana Abarca</h1>
+                <p class="tagline">Industrial engineer | MSc Operations Management | Prae-Doc Operations Research</p>
+                <div class="contact-links">
+                    <a href="mailto:juan.pablo.cantillana.abarca@univie.ac.at">Email</a>
+                    <a href="https://www.linkedin.com/in/juan-pablo-cantillana-abarca-84260a123/">LinkedIn</a>
+                    <a href="https://github.com/jpCantillana">GitHub</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section>
+        <h2>About Me</h2>
+        <p>I am a researcher at the Department of Business Decisions and Analytics, University of Vienna, where I have been working for the past year and a half. My current project involves developing machine learning-based acceleration techniques for routing problems. My research interests include exact and heuristic methods, logistics, and mathematical modeling.</p>
+    </section>
+
+    <section>
+        <h2>Curriculum Vitae</h2>
+        <p>You can view and download my latest CV optimized for view in PDF format below:</p>
+        <div class="btn-group">
+            <a class="download-btn" href="cv.pdf" target="_blank">Download PDF CV</a>
+            <a class="download-btn" href="cv_print.pdf" target="_blank">Print Version PDF</a>
+        </div>
+    </section>
+
+    <footer>
+        <p>© <span id="year"></span> Juan Pablo Cantillana</p>
+    </footer>
+
+    <script>
+        // Simple script to add the current year
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
